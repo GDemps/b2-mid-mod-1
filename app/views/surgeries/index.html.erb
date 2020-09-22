@@ -1,0 +1,9 @@
+<h1>Surgeries</h1>
+<% @surgeries.each do |surgery| %>
+  <%= "Surgery:" %><%= link_to "#{surgery.title}", "/surgeries/#{surgery.id}"%>
+    <ul>
+      <% surgery.doctors.each do |doctor| %>
+        <%= doctor.name %><br>
+      <% end %>
+    <ul>
+<% end %>
