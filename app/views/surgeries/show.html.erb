@@ -1,0 +1,12 @@
+<h1>Surgery</h1>
+  <%= @surgery.title %> <%= @surgery.operating_room_number  %>
+
+  <h2><%= "Other surgeries happening this #{@surgery.day_of_week}" %>
+ </h2>
+ <div class="container">
+   <div id="">
+     <% @surgery.this_day_surgeries.each do |d| %>
+       <%= d.title %>
+     <% end %>
+   </div>
+ </div>
